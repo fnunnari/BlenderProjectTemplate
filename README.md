@@ -103,11 +103,13 @@ This section explains how to see and used the Blander namespaces (bpy, mathutils
 
 This instructions are an adaptation of the Mutantbobs's [pycharm-blender](https://github.com/mutantbob/pycharm-blender) project documentation.
 
-### Configure the python interpreter
+### Configure the python interpreter for PyCharm
 
 Your PyCharm project must use the same python interpreter contained in your local Blender copy.
 
-PyCharm Menu —> Preferences -> Project: … -> Project Interpreter -> “gear” icon -> Add local -> select the python executable in your blender editor (e.g.: `path/to/project/BlenderExe/blender.app/Contents/Resources/2.78/python/bin/python3.5m`)
+PyCharm Menu —> Preferences -> Project: … -> Project Interpreter -> “gear” icon -> Add... -> Existing environment -> Interpreter: -> ... select the python executable in your blender editor. E.g.:
+  * (Win) `.../BlenderExe/2.79/python/bin/python.exe`
+  * (Mac) `.../BlenderExe/blender.app/Contents/Resources/2.78/python/bin/python3.5m`
 
 ### Generate Blender namespace stubs
 
@@ -140,7 +142,9 @@ This project comes with a set of pre-build namespaces in directory `PyCharm-Blen
 
 You must include the newly generated stubs in the search path of your python interpreter.
 
-PyCharm Menu -> Preferences... -> Project: ... -> Project Interpreter -> Project Interpreter x.y.z _path_ Gear -> more... -> (bottom icon) Show paths for current interpreter -> (icon +) Add -> Select e.g. path/to/PyCharm-Blender/python_api/pypredef-2.79
+* PyCharm Menu -> Preferences... -> Project: ... -> Project Interpreter -> Project Interpreter x.y.z _path_ Gear -> Show All...
+
+* Right pane, bottom icon (Show paths for current interpreter) -> (icon +) Add -> Select e.g. path/to/BlenderProjectTemplate/PyCharm-Blender/python_api/pypredef-2.79
 
 ## How to debug Blender code in PyCharm
 
