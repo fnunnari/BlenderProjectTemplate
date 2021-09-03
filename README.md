@@ -113,10 +113,11 @@ PyCharm Menu —> Preferences -> Project: … -> Project Interpreter -> “gear�
 
 ### Generate Blender namespace stubs
 
-This archive comes with some pre-computed stubs for several Blender versions.
-The following instructions are an adaptation of the [pycharm-blender](https://github.com/mutantbob/pycharm-blender) project documentation.
+This archive comes with some pre-computed stubs for several Blender versions in directory `PyCharm-Blender/python_api`.
 
 If you need to create stubs for a new Blender version, go on with the following steps:
+
+_The following instructions are an adaptation of the [pycharm-blender](https://github.com/mutantbob/pycharm-blender) project documentation._
 
 1. Locate the executable of the Blender version for which you want to create the namespace, e.g.,
 
@@ -136,15 +137,17 @@ If you need to create stubs for a new Blender version, go on with the following 
 
    `mv python_api/pypredef python_api/pypredef-2.79`
 
-This project comes with a set of pre-build namespaces in directory `PyCharm-Blender/python_api`.
-
 ### Configure the PyCharm to use the Blender namespace stubs
 
 You must include the newly generated stubs in the search path of your python interpreter.
 
 * PyCharm Menu -> Preferences... -> Project: ... -> Project Interpreter -> Project Interpreter x.y.z _path_ Gear -> Show All...
 
-* Right pane, bottom icon (Show paths for current interpreter) -> (icon +) Add -> Select e.g. path/to/BlenderProjectTemplate/PyCharm-Blender/python_api/pypredef-2.79
+* Python Interpreters window -> Bottom pane -> tree icon (Show paths for current interpreter)
+
+* Interpreter Paths window -> Bottom pane -> + icon (Add) -> Select e.g. path/to/BlenderProjectTemplate/PyCharm-Blender/python_api/pypredef-2.79
+
+Now the `bpy` and `mathutils` namespace should be visible and auto-completion available.
 
 ## How to debug Blender code in PyCharm
 
